@@ -81,3 +81,18 @@ select * from country where region like '%europe%';
 select * from country;
 select * from country where name like '%croatia%';
 select * from country where code like '%HRV%';
+
+# unesite mjesto Donji Miholjac
+select * from city;
+
+insert into city (Name, CountryCode, District, Population) 
+values ('Donji Miholjac', 'HRV', 'Osijek-Baranja', 10000);
+
+select * from city where name like '%Donji Miholjac%';
+
+# promjenite Donji Miholjac u Špièkovinu
+select * from city;
+update city set Name='spickovina' where ID=4080;
+
+# obrišite mjesto Špièkovina
+delete from city where ID=4080;    
